@@ -1,0 +1,29 @@
+.c-hh-section{
+    padding: 40px;  
+    &__img-wrapper{
+        display: flex;
+        align-items: flex-end;
+    }
+    &--light-2{
+        background-color: $light-color-2;
+    }
+    &__heading-wrapper{
+        margin-bottom: 1rem;
+    }
+    &__heading{
+        @include bp-xxl{
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+    }
+    &__sub-heading{
+        @include bp-xl{
+            font-size: 20px;
+            line-height: 1.4;
+        }
+    }
+}
+    
+
+
+

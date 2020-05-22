@@ -1,0 +1,80 @@
+.c-contact-form{
+    &__radio{
+        display: flex;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $dark-color-2;   
+        @include bp-md{
+            display: block;
+        }     
+        span.ant-radio{
+            margin-top: 6px;
+            margin-left: 5px;
+            display: inline-block;
+            vertical-align: text-top;
+            + span{
+                padding-left: 20px;
+                display: inline-block;
+                vertical-align: text-top;
+            }
+        }
+    }
+    &__main-form{
+        @include bp-sm{
+            padding: 20px 40px 5px;
+        }
+        @include bp-md{
+            border-left: 1px solid $brand-color-1;
+        }
+        @include bp-lg{
+            padding: 30px 60px 10px;
+        }
+        @include bpm-sm{
+            margin-bottom: 40px;
+        }
+    }
+    &__info-block{
+        @include bp-sm{
+            padding: 40px 40px 5px;
+        }
+        @include bp-lg{
+            padding: 60px 60px 10px;
+        }
+        @include bpm-sm{
+            margin-bottom: 40px;
+        }
+    }
+    &__link{
+        color: $brand-color-1;
+        &:hover{
+            color: $dark-color-2;
+        }
+    }
+    &__text{
+        font-weight: 500;
+        color: $dark-color-2;
+    }
+}
+
+
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-submenu-title:hover {
+    background: rgba($brand-color-1, 0.122);
+}
+.ant-input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    border-radius: 0;
+}
+
+.ant-input:focus,
+.ant-input:hover{
+    outline: none !important;
+    box-shadow:none;
+    border:none;
+
+}
+.error {
+    color: red;
+}

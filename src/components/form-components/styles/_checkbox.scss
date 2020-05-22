@@ -1,0 +1,52 @@
+.c-checkbox{
+    &__input{
+        display: none;
+        &:checked + .c-checkbox__icon{
+            &:after{
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                background-color: $brand-color-1;
+                @include bpm-xs{
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+        }
+    }
+    &__label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    &__icon{
+        position: relative;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        svg {
+            width: 50px;
+            height: auto;
+            @include bpm-xs{
+                width: 40px;
+            }
+        }
+    }
+    &--gold{
+        .c-checkbox{
+            &__label{
+                color: $brand-color-1;
+            }
+        }
+    }
+}

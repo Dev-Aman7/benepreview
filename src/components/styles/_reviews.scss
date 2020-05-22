@@ -1,0 +1,120 @@
+.reviews {
+    display: flex;
+    background: $black;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    &__heading {
+            width: 50%;
+            max-width: 100%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+    }
+
+    &__wrap {
+        width: 100%;
+        padding: 90px 50px;
+        padding-bottom: 0;
+        border-left: 1px solid $brand-color-1;
+        &--text{
+            color: $brand-color-1;
+            margin: 0;
+        }
+        &--xl{
+            font-size:60px;
+        }
+    }
+
+    &__img {
+        width: 50%;
+        max-width: 100%;
+    }
+}
+
+.write {
+    padding: 90px 40px;
+
+    &__reviews {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 10px;
+
+        &--text {
+            width: 70%;
+            font-size: 35px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__btn {
+        display: table;
+    }
+}
+
+
+.rating {
+    padding: 0 40px;
+    @include bpm-sm{
+        padding: 0 40px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        border-bottom: 1px solid $black;
+        position: relative;
+        margin-bottom: 20px;
+        margin-top: 15px;
+        @include bpm-md{
+            max-width: 100%;
+        }
+    }
+
+    &__star {
+        width: 17%;
+        border-right: 1px solid $brand-color-1;
+        max-width: 100%;
+        @include bpm-md{
+            width: 140px;
+        }
+        @include bpm-sm{
+            .ant-rate-star {
+                font-size: 15px !important;
+            }
+            width: 100%;
+            margin-bottom: 20px;
+            order: 0;
+        }
+    }
+    
+    &__text {
+        width: 80%;
+        max-width: 100%;
+        position: relative;
+        @include bpm-md{
+            width: calc(90% - 110px);
+        }
+        @include bpm-sm{
+            width: 100%;
+            order: 2;
+        }
+    }
+
+    &__date {
+        position: absolute;
+        top: 0;
+        right:0px;
+        @include bpm-sm{
+            position: static;
+            order: 1;
+        }
+    }
+}

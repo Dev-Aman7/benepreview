@@ -1,0 +1,41 @@
+.c-input{
+    display: block;
+    &__input{
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid $black !important ;
+        background-color: transparent !important;
+        &:focus,&:hover{
+            outline: none !important;
+            box-shadow: none;
+            border-bottom: 1px solid $dark-color-2;
+        }
+        &--important{
+            border-bottom: 1px solid $black !important;
+        }
+    }
+    &--dark{
+        .c-input{
+            &__input{
+                -moz-appearance: textfield;
+                color: $light-color-2;
+                border-color: $brand-color-1;
+            }
+        }
+    }
+    
+}
+// override old design
+.has-input{
+    padding-bottom: 10px;
+}
+// override ant design
+.has-error .ant-input:focus{
+    box-shadow: none;
+}
+
+.has-error .ant-input:not([disabled]) {
+    border-color: $error-color;
+}

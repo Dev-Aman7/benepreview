@@ -1,0 +1,31 @@
+.c-checkout-payment{
+    
+    // ant design override
+    .ant-collapse-header{
+        display: none !important;
+    }
+    .ant-collapse-content-box{
+        padding: 0 !important;
+    }
+    .ant-collapse-item{
+        border: none !important;
+    }
+    .ant-collapse-borderless{
+        background-color: transparent !important;
+    }
+}
+//
+.suggestion-item, .suggestion-item--active{
+    background: transparent !important;
+    padding: 3px 5px !important;
+}
+.suggestion-item--active{
+    background: $light-color-3 !important
+}
+.autocomplete-dropdown-container{
+    // box-shadow: 10px 0px 0px rgba(black, .2);
+}
+
+.c-hidden{
+    display:none;
+}

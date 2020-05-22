@@ -1,0 +1,19 @@
+
+//overriding ant design
+
+.ant-select{
+    &-selection__rendered{
+
+    }
+    &-selection{    
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        border-bottom: 1px solid $brand-color-1 !important;
+    }
+    &-dropdown-menu-item{
+        &-selected, &:hover{
+            background-color: rgba($brand-color-1, .2) !important;
+        }
+    }
+}

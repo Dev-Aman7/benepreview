@@ -1,0 +1,101 @@
+.c-radio{
+    &__input{
+        display: none;
+        &:checked + .c-radio__icon{
+            background-color: $brand-color-1;
+            &:after{
+                content: "";
+                display: block;
+                width: 5px;
+                height: 5px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                border-radius: 50%;
+                background-color: $light-color;
+            }
+        }
+    }
+    &__label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    &__icon{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid $brand-color-1;
+        margin-right: 10px;
+        // svg {
+        //     width: 50px;
+        //     height: auto;
+        // }
+    }
+    &--gold{
+        .c-radio{
+            &__label{
+                color: $brand-color-1;
+            }
+        }
+    }
+}
+
+// change default radio
+.ant-radio{
+    * {
+        box-shadow: none !important;
+    }
+    &-inner{
+        width: 20px;
+        height: 20px;
+        border: 1px solid $brand-color-1;
+        &:after{
+            top: 5px;
+            left: 5px;
+        }
+    }
+    &-group{
+        &.bordered{
+            .ant-radio-wrapper{
+                padding: 8px 15px;
+                display: block;
+                margin-bottom: 15px;
+                border: 1px solid $brand-color-1;
+            }
+        }
+    }
+    &-checked{
+        .ant-radio{
+            &-inner{
+                border-color: $brand-color-1 !important;
+                background-color: $brand-color-1;
+                box-shadow: none !important;
+                &:after{
+                    background-color: $light-color;
+                    border-color: $brand-color-1;
+                }
+            }
+        }
+        &:after{
+            border-color: $brand-color-1;
+        }
+    }
+}
+.ant-radio-wrapper {
+    @include bpm-md{
+        white-space: normal;
+        .ant-form-item-children {
+            width: 100%;
+        }
+    }
+}
+
+.ant-radio-wrapper:hover .ant-radio, .ant-radio:hover .ant-radio-inner, .ant-radio-input:focus + .ant-radio-inner{
+    border-color:$brand-color-1;
+}

@@ -1,0 +1,17 @@
+.c-contact{
+    &__container{
+        padding: 20px;
+        background-color: $light-color-2;
+        @include bp-lg{
+            padding-top: 100px;
+            padding: 40px;
+        }
+    }
+}
+.forget-password-wrapper{
+    width: 600px;
+    display: block;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: calc(100% - 15px);
+}
